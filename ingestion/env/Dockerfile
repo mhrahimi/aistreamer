@@ -75,9 +75,10 @@ RUN apt-get update && apt-get install -y \
     vim \
     zip \
     zlib1g-dev \
+    sudo \
     && apt-get clean
 
-RUN easy_install pip
+RUN apt-get install -y python-pip
 
 RUN add-apt-repository ppa:jonathonf/ffmpeg-4 -y
 RUN apt-get update && apt-get install -y \
